@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+		integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+
+	<title>Admin</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body class="banner">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="/js/admin/category.js"></script>
+	<script src="/js/admin/categoryValidation.js"></script>
+
+	<!-- Start navigation bar -->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img th:src="@{/images/logo.png}" width="auto" height="40" class="d-inline-block align-top" alt="" />
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto text-uppercase">
+					<li class="nav-item active">
+						<a class="nav-link" th:href="@{/admin}" href="#">admin-home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" th:href="@{/admin/products}" href="#">all-products</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" th:href="@{/logout}" href="#">logout</a>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+	<!-- Start navigation bar -->
+
+	<!-- add category in to database -->
+
+	<div id="main" class="container">
+
+		<div class="row">
+			<div class="col-sm-4">
+				<form id="postcategory" name="postcategory" onsubmit="return validateForm()" method="post">
+
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" class="form-control" name="name" required id="name" placeholder="Enter name">
+						<div class="error text-danger" id="nameErr"></div>
+					</div>
+
+					<button type="submit" class="btn btn-primary" id="btn-search">Submit</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<form id="getCategory" name="getCategory" method="post">
+					<div>
+						<input class="form-control me-2 mt-2" type="search" id="keyword" name="keyword"
+							placeholder="Search" aria-label="Search">
+					</div>
+					<div>
+						<button class="btn btn-outline-success btn-dark mt-2 mb-2" type="submit">Search</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+
+		<!-- fetchig data on the same page -->
+
+		<div id="responseDiv"></div>
+		<table class="table" id="category-table">
+			<thead class="thead-light">
+				<tr>
+					<th scope="col">SNO</th>
+					<th scope="col">Category Name</th>
+					<th scope="col">Update</th>
+					<th scope="col">Delete</th>
+
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+
+body {
+	background: #e2e2e2 !important;
+}
+
+.banner {
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8));
+	background-size: cover;
+	color: rgb(23, 38, 7);
+	
+}
+
+.jumbotron{
+	background:transparent !important;
+	color:blue;	
+}
+
+.shop {
+  padding: 16px;
+  margin-top: 60px;
+  height: 1000px; /* Used in this example to enable scrolling */
+}
+
+.shop-nav {
+  overflow: hidden;
+  background-color: rgb(0, 150, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.shop-nav {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  padding-top: 15px;
+  box-shadow: 0px 0px 8px 0px;
+  -webkit-box-shadow: 0px 0px 8px 0px;
+  -moz-box-shadow: 0px 0px 8px 0px;
+  background-color: gray;
+  width: 100%;
+  z-index: 100;
+}
+
+.my-card {
+	padding: 20px;
+	background: #FFFFFF;
+}
+
+
+.navbar a:hover {
+  background: rgb(221, 188, 32);
+  color: black;
+}
+
+
+
+
+
